@@ -1,14 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 11 14:21:57 2021
 
-@author: Daniela
-"""
 import pandas as pd
 
-train = pd.read_csv(r"C:\Users\Daniela\OneDrive\Desktop\Vehicle\vehicle_train.csv")
-test = pd.read_csv(r"C:\Users\Daniela\OneDrive\Desktop\Vehicle\vehicle_test.csv")
-labels = pd.read_csv(r"C:\Users\Daniela\OneDrive\Desktop\Vehicle\vehicle_training_labels.csv")
+train = pd.read_csv(r"C:\Users\...\vehicle_train.csv")
+test = pd.read_csv(r"C:\Users\...\vehicle_test.csv")
+labels = pd.read_csv(r"C:\Users\...\vehicle_training_labels.csv")
 train = train.drop(['ID'],axis = 1)
 test = test.drop(['ID'],axis = 1)
 train.describe()
@@ -29,7 +24,7 @@ y_pred=rfc.predict(x_test)
 rfc = pd.DataFrame(rfc.predict(test))
 rfc.index.name = 'ID'
 rfc.index += 1
-rfc.to_csv(r"C:\Users\Daniela\OneDrive\Desktop\Vehicle\rfcSubmissionFile.csv", index = True, header=['Class'])
+rfc.to_csv(r"C:\Users\...\rfcSubmissionFile.csv", index = True, header=['Class'])
 
 from sklearn import metrics
 print("rfc accuracy:", metrics.accuracy_score(y_test, y_pred))
@@ -48,7 +43,7 @@ y_pred=clf.predict(x_test)
 clf = pd.DataFrame(clf.predict(test))
 clf.index.name = 'ID'
 clf.index += 1
-clf.to_csv(r"C:\Users\Daniela\OneDrive\Desktop\Vehicle\clfSubmissionFile.csv", index = True, header=['Class'])
+clf.to_csv(r"C:\Users\...\clfSubmissionFile.csv", index = True, header=['Class'])
 
 from sklearn import metrics
 print("svm accuracy:", metrics.accuracy_score(y_test, y_pred))
