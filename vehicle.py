@@ -1,4 +1,4 @@
-#have used:Random Forest Classifier and Support Vector Classifier 
+#have used:Random Forest Classifier and Support Vector Classifier, as suggested in the competetion description
 
 import pandas as pd
 
@@ -15,6 +15,8 @@ x=train[['Comp', 'Circ', 'D.Circ', 'Rad.Ra', 'Pr.Axis.Ra', 'Max.L.Ra', 'Scat.Ra'
 #z=test[['Comp', 'Circ', 'D.Circ', 'Rad.Ra', 'Pr.Axis.Ra', 'Max.L.Ra', 'Scat.Ra', 'Elong', 'Pr.Axis.Rect', 'Max.L.Rect', 'Sc.Var.Maxis', 'Sc.Var.maxis', 'Ra.Gyr', 'Skew.Maxis', 'Skew.maxis', 'Kurt.maxis', 'Kurt.Maxis', 'Holl.Ra']]
 y=labels['Class']
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
+
+#Random Forest Classifier is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. 
 
 from sklearn.ensemble import RandomForestClassifier
 
@@ -35,6 +37,8 @@ x=train[['Comp', 'Circ', 'D.Circ', 'Rad.Ra', 'Pr.Axis.Ra', 'Max.L.Ra', 'Scat.Ra'
 #z=test[['Comp', 'Circ', 'D.Circ', 'Rad.Ra', 'Pr.Axis.Ra', 'Max.L.Ra', 'Scat.Ra', 'Elong', 'Pr.Axis.Rect', 'Max.L.Rect', 'Sc.Var.Maxis', 'Sc.Var.maxis', 'Ra.Gyr', 'Skew.Maxis', 'Skew.maxis', 'Kurt.maxis', 'Kurt.Maxis', 'Holl.Ra']]
 y=labels['Class']
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3, random_state=100)
+
+#Support Vector Machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection.
 
 from sklearn import svm
 clf=svm.SVC(kernel='linear')
