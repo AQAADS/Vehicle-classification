@@ -33,7 +33,7 @@ y_pred=rfc.predict(x_test)
 rfc = pd.DataFrame(rfc.predict(test))
 rfc.index.name = 'ID'
 rfc.index += 1
-rfc.to_csv(r"C:\Users\...\rfcSubmissionFile.csv", index = True, header=['Class'])
+rfc.to_csv(r"C:\Users\...\rfcSubmissionFile.csv", index = True, header=['Class']) # saving the predicion on a csv file
 
 #Importing scikit-learn metrics module for accuracy calculation
 
@@ -60,7 +60,7 @@ y_pred=clf.predict(x_test) #Predict the response for test dataset
 clf = pd.DataFrame(clf.predict(test))
 clf.index.name = 'ID'
 clf.index += 1
-clf.to_csv(r"C:\Users\...\clfSubmissionFile.csv", index = True, header=['Class']) # saving the 
+clf.to_csv(r"C:\Users\...\clfSubmissionFile.csv", index = True, header=['Class']) # saving the predicion on a different csv file
 
 #Importing scikit-learn metrics module for accuracy calculation
 
